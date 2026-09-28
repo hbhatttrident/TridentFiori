@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd.zsd_tr2.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="trtwoType">
+                <Key>
+                    <PropertyRef Name="trkorr"/>
+                </Key>
+                <Property Name="trkorr" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="source_client" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="ds2_100_tr_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ds2_100_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ds2_100_time" Type="Edm.TimeOfDay" Nullable="false"/>
+                <Property Name="ds2_200_tr_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ds2_200_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ds2_200_time" Type="Edm.TimeOfDay" Nullable="false"/>
+                <Property Name="ds2_300_tr_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ds2_300_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ds2_300_time" Type="Edm.TimeOfDay" Nullable="false"/>
+                <Property Name="qs2_100_tr_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="qs2_100_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="qs2_100_time" Type="Edm.TimeOfDay" Nullable="false"/>
+                <Property Name="ps4_100_tr_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ps4_100_status" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ps4_100_time" Type="Edm.TimeOfDay" Nullable="false"/>
+                <Property Name="imported_by" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="return_code" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="filter_system" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="filter_client" Type="Edm.String" Nullable="false" MaxLength="3"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="trtwo" EntityType="com.sap.gateway.srvd.zsd_tr2.v0001.trtwoType"/>
+            </EntityContainer>
+            <Annotations Target="SAP__self.trtwoType/trkorr">
+                <Annotation Term="SAP__common.Label" String="Transport Request"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Request/Task"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Request/Task"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TRKORR"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/source_client">
+                <Annotation Term="SAP__common.Label" String="Source Client"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Source client"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Source client of request"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TRCLIENT"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_100_tr_status">
+                <Annotation Term="SAP__common.Label" String="DS2(100) TR Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_100_status">
+                <Annotation Term="SAP__common.Label" String="DS2(100) Import Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_100_time">
+                <Annotation Term="SAP__common.Label" String="DS2(100) Import Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_200_tr_status">
+                <Annotation Term="SAP__common.Label" String="DS2(200) TR Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_200_status">
+                <Annotation Term="SAP__common.Label" String="DS2(200) Import Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_200_time">
+                <Annotation Term="SAP__common.Label" String="DS2(200) Import Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_300_tr_status">
+                <Annotation Term="SAP__common.Label" String="DS2(300) TR Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_300_status">
+                <Annotation Term="SAP__common.Label" String="DS2(300) Import Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ds2_300_time">
+                <Annotation Term="SAP__common.Label" String="DS2(300) Import Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/qs2_100_tr_status">
+                <Annotation Term="SAP__common.Label" String="QS2 TR Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/qs2_100_status">
+                <Annotation Term="SAP__common.Label" String="QS2 Import Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/qs2_100_time">
+                <Annotation Term="SAP__common.Label" String="QS2 Import Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ps4_100_tr_status">
+                <Annotation Term="SAP__common.Label" String="PS4 TR Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ps4_100_status">
+                <Annotation Term="SAP__common.Label" String="PS4 Import Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/ps4_100_time">
+                <Annotation Term="SAP__common.Label" String="PS4 Import Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/imported_by">
+                <Annotation Term="SAP__common.Label" String="Imported By"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/return_code">
+                <Annotation Term="SAP__common.Label" String="Return Code"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/filter_system">
+                <Annotation Term="SAP__common.Label" String="System"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType/filter_client">
+                <Annotation Term="SAP__common.Label" String="Client"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Source client"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Source client of request"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TRCLIENT"/>
+            </Annotations>
+            <Annotations Target="SAP__self.trtwoType">
+                <Annotation Term="SAP__common.Label" String="Transport Import Status"/>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="trkorr"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="source_client"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_100_tr_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_100_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_100_time"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_200_tr_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_200_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_200_time"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_300_tr_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_300_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ds2_300_time"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="qs2_100_tr_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="qs2_100_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="qs2_100_time"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ps4_100_tr_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ps4_100_status"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ps4_100_time"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="imported_by"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="return_code"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>trkorr</PropertyPath>
+                        <PropertyPath>filter_system</PropertyPath>
+                        <PropertyPath>filter_client</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/trtwo">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="TextDirectionLayout" Bool="true"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                        <PropertyValue Property="UploadToFileShare" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

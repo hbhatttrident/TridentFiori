@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Sep 07 2026 17:30:47 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://tridentds2:44300/sap/opu/odata4/sap/zsb_tr2/srvd/sap/zsd_tr2/0001/",
+    "appName": "zsdtr2",
+    "appTitle": "Transport Manager",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "zsdtr2",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.20",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.25.0",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "trtwo"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
